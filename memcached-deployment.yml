@@ -12,9 +12,9 @@ spec:
       labels:
         app: vpromc
     spec:
-    containers:
-      - name: vpromc
-        image: memcached
-        ports:
-          - name: memcached-port
-            containerPort: 11211
+      containers:
+        - name: vpromc
+          image: memcached
+          ports:
+            - name: memcached-port
+              containerPort: 11211
