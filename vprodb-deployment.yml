@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vpro-database
+  name: vprodb
   labels:
-    app: vpro-database
+    app: vprodb
 spec:
   selector:
     matchLabels:
-      app: vpro-database
+      app: vprodb
   replicas: 1
   template:
     metadata:
       labels:
-        app: vpro-database
+        app: vprodb
     spec:
       containers:
-      - name: vpro-database
+      - name: vprodb
         image: abhishekm89/db:latest
         args:
           - "--ignore-db-dir=lost+found"
         volumeMounts:
           - mountPath: /var/lib/mysql
-            name: vpro-database
+            name: vprodb
         ports:
           - name: database-port
             containerPort: 3306
