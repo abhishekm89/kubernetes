@@ -13,13 +13,13 @@ spec:
       labels:
         app: vproapp
     spec:
-    containers:
-    - name: vproapp
-      image: abhishekm89/app:latest
-      ports:
-      - containerPort:
-        - name: application-port
-          containerPort: 8080
+      containers:
+      - name: vproapp
+        image: abhishekm89/app:latest
+        ports:
+        - containerPort:
+          - name: application-port
+            containerPort: 8080
     initContainers:
     - name: init-mydb
       image: busybox
