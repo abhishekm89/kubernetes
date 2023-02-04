@@ -18,5 +18,5 @@ spec:
       - name: vproapp
         image: abhishekm89/app:latest
         ports:
-        - name: application-port
+        - name: app-port
           containerPort: 8080
