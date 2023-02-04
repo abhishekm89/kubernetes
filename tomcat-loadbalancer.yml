@@ -5,7 +5,7 @@ metadata:
 spec:
   ports:
   - port: 80
-    targetPort: application-port
+    targetPort: app-port
     protocol: TCP
   selector:
     app: vproapp
