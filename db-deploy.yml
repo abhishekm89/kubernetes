@@ -18,8 +18,8 @@ spec:
         - name: vprodb
           image: abhishekm89/db:latest
 #          args:
-#            - "--ignore-db-dir"
-#            - "lost+found"
+#          - "--ignore-db-dir"
+#          - "lost+found"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: db-volume
@@ -41,10 +41,10 @@ spec:
           awsElasticBlockStore:
             volumeID: vol-0e8758ca1b8288234
             fsType: ext4
-#      initContainers:
-#        - name: busybox
-#          image: busybox:latest
-#          args: [ "rm", "-rf", "/var/lib/mysql/lost+found" ]
-#          volumeMounts:
-#            - name: db-volume
-#              mountPath: /var/lib/mysql
+      initContainers:
+        - name: busybox
+          image: busybox:latest
+          args: [ "rm", "-rf", "/var/lib/mysql/lost+found" ]
+          volumeMounts:
+            - name: db-volume
+              mountPath: /var/lib/mysql
