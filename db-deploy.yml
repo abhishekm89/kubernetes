@@ -17,9 +17,9 @@ spec:
       containers:
         - name: vprodb
           image: abhishekm89/db:latest
-          args:
-            - "--ignore-db-dir"
-            - "lost+found"
+#          args:
+#            - "--ignore-db-dir"
+#            - "lost+found"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: db-volume
