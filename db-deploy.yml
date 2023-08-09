@@ -33,7 +33,7 @@ spec:
                   name: app-secret
                   key: dp-pass
             - name: MYSQL_DATABASE
-              value: accounts
+              value: vprodb
       nodeSelector:
         zone: us-east-1a
       volumes:
