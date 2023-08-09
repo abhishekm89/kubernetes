@@ -1,0 +1,22 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: vprormq
+  labels:
+    app: vprormq
+spec:
+  selector:
+    matchLabels:
+      app: vprormq
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vprormq
+    spec:
+      containers:
+        - name: vprormq
+          image: rabbitmq
+          ports:
+            - name: vprormq-port
+              containerPort: 15672
