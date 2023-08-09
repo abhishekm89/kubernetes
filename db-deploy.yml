@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: vprofile/vprofiledb
+          image: abhishekm89/db:latest
 #          args:
 #            - "--ignore-db-dir"
 #            - "lost+found"
@@ -32,6 +32,8 @@ spec:
                 secretKeyRef:
                   name: app-secret
                   key: dp-pass
+            - name: MYSQL_DATABASE
+              value: accounts
       nodeSelector:
         zone: us-east-1a
       volumes:
