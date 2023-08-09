@@ -18,7 +18,8 @@ spec:
         - name: vprodb
           image: abhishekm89/db:latest
           args:
-            - "--ignore-db-dir"-"lost+found"
+            - "--ignore-db-dir"
+            - "lost+found"
           securityContext:
             runAsUser: 999
           volumeMounts:
