@@ -19,6 +19,8 @@ spec:
           image: abhishekm89/db:latest
           # args:
           #   - "--ignore-db-dir=lost+found"
+          securityContext:
+            runAsUser: 999
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: db-volume
