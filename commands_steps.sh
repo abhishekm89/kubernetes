@@ -33,5 +33,6 @@ kubectl create -f memcached-deploy.yml
 kubectl create -f memcached-clusterIP.yml
 kubectl create -f rabbitmq-deploy.yml
 kubectl create -f rabbitmq-clusterIP.yml
+kubeclt
 
 
